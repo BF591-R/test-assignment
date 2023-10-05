@@ -7,5 +7,5 @@ source("main.R")
 ```
 
 ```{r}
-add(3)
+add3(3)
 ```
