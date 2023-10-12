@@ -19,8 +19,8 @@ jobs:
       - name: checkout submission
         uses: actions/checkout @v4
         with:
-            - repository: ${{ github.repository }}
-            - path: submission
+            repository: ${{ github.repository }}
+            path: submission
       - name: checkout template tests
         uses: actions/checkout @v4
         with:
