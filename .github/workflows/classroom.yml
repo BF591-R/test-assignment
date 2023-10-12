@@ -17,12 +17,12 @@ jobs:
         - .:/github/workspace
     steps:
       - name: checkout submission
-        uses: actions/checkout @v4
+        uses: actions/checkout@v4
         with:
             repository: ${{ github.repository }}
             path: submission
       - name: checkout template tests
-        uses: actions/checkout @v4
+        uses: actions/checkout@v4
         with:
             repository: BF591-R/test-assignment
             path: template
