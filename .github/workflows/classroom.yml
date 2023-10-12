@@ -18,6 +18,7 @@ jobs:
       volumes:
         - .:/github/workspace
     steps:
+      - run: echo github.repository ${{ github.repository }}
       - name: checkout submission
         uses: actions/checkout@v4
         with:
