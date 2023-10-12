@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   Grading:
-    if: ${{ github.repository != 'BF591-R/test-assignment' && github.actor != 'github-classroom' }}
+    if: ${{ github.repository != 'BF591-R/test-assignment' && github.actor != 'github-classroom[bot]' }}
     name: Testing code
     runs-on: ubuntu-latest
     container:
