@@ -10,7 +10,7 @@ permissions:
 jobs:
   Grading:
     # don't run this workflow if it is the public template repo
-    if: "${{ github.repository }} != 'BF591-R/test-assignment'"
+    if: ${{ github.repository != 'BF591-R/test-assignment' }}
     name: Testing code
     runs-on: ubuntu-latest
     container:
