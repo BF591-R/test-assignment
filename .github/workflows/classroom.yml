@@ -1,4 +1,5 @@
 name: GitHub Classroom Workflow
+run-name: ${{ github.actor }} triggered autograde
 
 on: [push]
 
@@ -9,7 +10,6 @@ permissions:
 
 jobs:
   Grading:
-    # don't run this workflow if it is the public template repo
     if: ${{ github.repository != 'BF591-R/test-assignment' && github.actor != 'github-classroom' }}
     name: Testing code
     runs-on: ubuntu-latest
@@ -18,7 +18,6 @@ jobs:
       volumes:
         - .:/github/workspace
     steps:
-      - run: echo github.repository ${{ github.repository }}
       - name: checkout submission
         uses: actions/checkout@v4
         with:
@@ -29,7 +28,9 @@ jobs:
             repository: BF591-R/test-assignment
             path: template
       - name: run tests
-        run: bash /entrypoint.sh test main.R template/test_main.R test_results.csv
+        run: |
+          cp template/test_main.R .
+          bash /entrypoint.sh test main.R test_main.R test_results.csv
       - name: upload test results as artifact
         uses: actions/upload-artifact@v3
         with:

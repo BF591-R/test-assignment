@@ -1,9 +1,29 @@
 {
   "tests": [
     {
-      "name": "metatest",
+      "name": "add3: adds 3 to 3 and gets 6",
       "setup": "",
       "run": "awk -F ',' 'NR == 2 { print $2; exit}' test_results.csv",
+      "input": "",
+      "output": "success",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "add3: add 3 to a vector of numbers",
+      "setup": "",
+      "run": "awk -F ',' 'NR == 3 { print $2; exit}' test_results.csv",
+      "input": "",
+      "output": "success",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "add3: fails when given invalid input",
+      "setup": "",
+      "run": "awk -F ',' 'NR == 4 { print $2; exit}' test_results.csv",
       "input": "",
       "output": "success",
       "comparison": "exact",
