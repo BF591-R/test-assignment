@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "metatest",
+      "setup": "",
+      "run": "awk -F ',' 'NR == 2 { print $2; exit}' test_results.csv",
+      "input": "",
+      "output": "success",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
