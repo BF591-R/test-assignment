@@ -20,14 +20,13 @@ jobs:
         uses: actions/checkout@v4
         with:
             repository: ${{ github.repository }}
-            path: submission
       - name: checkout template tests
         uses: actions/checkout@v4
         with:
             repository: BF591-R/test-assignment
             path: template
       - name: run tests
-        run: bash /entrypoint.sh test submission/main.R template/test_main.R test_results.csv
+        run: bash /entrypoint.sh test main.R template/test_main.R test_results.csv
       - name: upload test results as artifact
         uses: actions/upload-artifact@v3
         with:
