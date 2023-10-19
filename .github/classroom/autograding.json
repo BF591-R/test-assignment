@@ -5,7 +5,7 @@
       "setup": "awk -F ',' '$1 == 1 { print \"testnum:\", $1, \"\\nresult:\", $2, \"\\ntest:\", $3, \"\\nmessage:\", $4; exit}' test_results.csv",
       "run": "awk -F ',' '$1 == 1 { print; exit}' test_results.csv | grep -q -e 'success' -e 'warning'",
       "input": "",
-      "output": "success",
+      "output": "",
       "comparison": "exact",
       "timeout": 10,
       "points": 1
@@ -15,7 +15,7 @@
       "setup": "awk -F ',' '$1 == 2 { print \"testnum:\", $1, \"\\nresult:\", $2, \"\\ntest:\", $3, \"\\nmessage:\", $4; exit}' test_results.csv",
       "run": "awk -F ',' '$1 == 2 { print; exit}' test_results.csv | grep -q -e 'success' -e 'warning'",
       "input": "",
-      "output": "success",
+      "output": "",
       "comparison": "exact",
       "timeout": 10,
       "points": 1
@@ -25,7 +25,7 @@
       "setup": "awk -F ',' '$1 == 3 { print \"testnum:\", $1, \"\\nresult:\", $2, \"\\ntest:\", $3, \"\\nmessage:\", $4; exit}' test_results.csv",
       "run": "awk -F ',' '$1 == 3 { print; exit}' test_results.csv | grep -q -e 'success' -e 'warning'",
       "input": "",
-      "output": "success",
+      "output": "",
       "comparison": "exact",
       "timeout": 10,
       "points": 1
